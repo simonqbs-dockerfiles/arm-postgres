@@ -17,6 +17,13 @@ ENV PG_MAJOR 9.6
 ENV PG_VERSION 9.6.2
 ENV PG_SHA256 0187b5184be1c09034e74e44761505e52357248451b0c854dddec6c231fe50c9
 
+ARG VCS_REF
+ARG BUILD_DATE
+
+LABEL \ 
+	org.label-schema.build-date=$BUILD_DATE \
+	org.label-schema.vcs-ref=$VCS_REF \
+	org.label-schema.vcs-url="https://github.com/simonqbs-dockerfiles/arm-postgres"
 
 # 2017-04-01
 # Unable to find libxslt* packages using v3.5. Probably some mirror issues.
